@@ -1,0 +1,48 @@
+# Attachment Slug Copyright (c) {2016}
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Attachment Slug 0.0.1\n"
+"Report-Msgid-Bugs-To: https://github.com/seb86/Attachment-Slug/issues\n"
+"POT-Creation-Date: 2016-02-23 02:37+0100\n"
+"PO-Revision-Date: 2015-05-20 17:15+0100\n"
+"Last-Translator: Attachment Slug <mailme@sebastiendumont.com>\n"
+"Language-Team: WP-Translations <wpt@wp-translations.org>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: permalink-settings.php:36
+msgid "Attachment Permalink"
+msgstr ""
+
+#: permalink-settings.php:54
+msgid "These settings control the permalink used specifically for attachments."
+msgstr ""
+
+#: permalink-settings.php:67
+msgid "Default"
+msgstr ""
+
+#: permalink-settings.php:71
+msgid "Attachment base"
+msgstr ""
+
+#: permalink-settings.php:76
+msgid "Custom Base"
+msgstr ""
+
+#: permalink-settings.php:78
+msgid ""
+"Enter a custom base to use. A base <strong>must</strong> be set or WordPress "
+"will use default instead."
+msgstr ""
