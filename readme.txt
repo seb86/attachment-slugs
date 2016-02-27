@@ -20,7 +20,7 @@ If you would like to translate the plugin, you can do so via [Transifex](https:/
 
 = Contribute on GitHub =
 
-You can [contribute code](https://github.com/seb86/Attachment-Slug/blob/master/CONTRIBUTING.md) to this plugin via the [GitHub](https://github.com/seb86/Attachment-Slug/blob/master/CONTRIBUTING.md) repository.
+You can [contribute code](https://github.com/seb86/Attachment-Slug/blob/master/.github/CONTRIBUTING.md) to this plugin via the [GitHub](https://github.com/seb86/Attachment-Slug/blob/master/.github/CONTRIBUTING.md) repository.
 
 == Installation ==
 
@@ -44,5 +44,5 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 
 == Changelog ==
 
-= v1.0.0 - 23/02/2016 =
+= v1.0.0 - 27/02/2016 =
 * Initial Version.
