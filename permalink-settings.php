@@ -117,7 +117,7 @@ class AS_Admin_Permalink_Settings {
 		if ( isset( $_POST['permalink_structure'] ) && isset( $_POST['attachment_permalink'] ) ) {
 			$permalink = get_option( 'attachment_permalink' );
 
-			if (!empty($permalinks)) {
+			if (isset($permalinks) && !empty($permalinks)) {
 				$permalink = array();
 			}
 
