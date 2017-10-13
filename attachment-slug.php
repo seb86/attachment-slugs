@@ -77,7 +77,7 @@ function as_init_textdomain() {
 	$lang_dir = apply_filters( 'attachment_slug_languages_directory', $lang_dir );
 
 	// Traditional WordPress plugin locale filter
-	$locale = apply_filters( 'plugin_locale',  get_locale(), 'woocommerce-skip-one' );
+	$locale = apply_filters( 'plugin_locale',  get_locale(), 'attachment-slug' );
 	$mofile = sprintf( '%1$s-%2$s.mo', 'attachment-slug', $locale );
 
 	// Setup paths to current locale file
