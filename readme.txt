@@ -3,8 +3,8 @@ Contributors:      sebd86
 Donate Link:       https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=mailme@sebastiendumont.com&currency_code=&amount=&return=&item_name=Buy+me+a+coffee+for+an+awesome+WordPress+plugin
 Tags:              attachment, attachments, attachment slug, page slug, image slug, image url, permalinks, custom permalinks
 Requires at least: 4.0
-Tested up to:      4.4.2
-Stable tag:        0.0.1
+Tested up to:      4.8.2
+Stable tag:        0.0.2
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Enables you to add an attachment slug allowing the attachment posts to have it's
 
 == Description ==
 
-Enables you to add an attachment slug allowing the attachment posts to have it's own URL structure.
+Enables you to add an attachment slug allowing the attachment posts to have it's own URL structure. This makes the URLs more friendly and great for SEO results should you decide to index your attachment pages.
 
 = Translate =
 
