@@ -1,11 +1,11 @@
 <?php
 /*
  * Plugin Name:       Attachment Slug
- * Plugin URI:        https://github.com/seb86/Attachment-Slug
+ * Plugin URI:        https://wordpress.org/plugins/attachment-slug/
  * Description:       Enables you to add an attachment slug allowing the attachment posts to have it's own URL structure.
- * Version:           0.0.1
+ * Version:           0.0.2
  * Author:            Sébastien Dumont
- * Author URI:        http://sebastiendumont.com
+ * Author URI:        https://sebastiendumont.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       attachment-slug
