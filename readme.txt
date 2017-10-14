@@ -44,5 +44,9 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 
 == Changelog ==
 
-= v1.0.0 - 27/02/2016 =
+= v0.0.2 - ?/10/2017
+* FIXED: Attachment base option when saving the permalinks.
+* FIXED: Undefined variable in permalink-settings.php
+
+= v0.0.1 - 27/02/2016 =
 * Initial Version.
