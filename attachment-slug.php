@@ -1,28 +1,17 @@
 <?php
 /*
- * Plugin Name:       Attachment Slug
- * Plugin URI:        https://wordpress.org/plugins/attachment-slug/
- * Description:       Enables you to add an attachment slug allowing the attachment posts to have it's own URL structure.
- * Version:           0.0.2
- * Author:            Sébastien Dumont
- * Author URI:        https://sebastiendumont.com
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       attachment-slug
- * Domain Path:       /languages/
+ * Plugin Name: Attachment Slug
+ * Plugin URI:  https://wordpress.org/plugins/attachment-slug/
+ * Description: Enables you to add an attachment slug allowing the attachment posts to have it's own URL structure.
+ * Version:     0.0.2
+ * Author:      Sébastien Dumont
+ * Author URI:  https://sebastiendumont.com
+ * Text Domain: attachment-slug
+ * Domain Path: /languages/
  *
- * Attachment Slug is distributed under the terms of the
- * GNU General Public License as published by the Free Software Foundation,
- * either version 2 of the License, or any later version.
- *
- * Attachment Slug is distributed in the hope that it will
- * be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with Attachment Slug.
- * If not, see <http://www.gnu.org/licenses/>.
+ * Copyright:   © 2017 Sébastien Dumont
+ * License:     GNU General Public License v2.0+
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 if ( ! defined('ABSPATH')) {
 	exit;
