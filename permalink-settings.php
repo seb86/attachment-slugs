@@ -68,7 +68,7 @@ class AS_Admin_Permalink_Settings {
 					<td><code class="default-example"><?php echo esc_html( home_url() ); ?>/?attachment=1</code> <code class="non-default-example"><?php echo esc_html( home_url() ); ?>/sample-attachment/</code></td>
 				</tr>
 					<tr>
-						<th><label><input name="attachment_permalink" type="radio" value="<?php echo esc_attr( $structures[1] ); ?>" class="astog" <?php checked( $structures[1], $attachment_permalink['base'] ); ?> /> <?php _e( 'Attachment base', 'attachment-slug' ); ?></label></th>
+						<th><label><input name="attachment_permalink" type="radio" value="<?php echo esc_attr( $structures[1] ); ?>" class="astog" <?php checked( $structures[1], trailingslashit( $attachment_permalink['base'] ) ); ?> /> <?php _e( 'Attachment base', 'attachment-slug' ); ?></label></th>
 						<td><code><?php echo esc_html( home_url() ); ?>/<?php echo esc_html( $base_slug ); ?>/sample-attachment/</code></td>
 					</tr>
 				<tr>
