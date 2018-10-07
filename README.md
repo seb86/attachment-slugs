@@ -1,14 +1,62 @@
 # Attachment Slugs for WordPress
 
-Enables you to have a permalink for media attachments by allowing the attachment posts to have it’s own permalink URL structure. This makes the URLs more friendly and great for SEO results should you decide to index your attachment pages.
+**Contributors:** sebd86  
+**Tags:** attachment, attachments, attachment slug, page slug, image slug, image url, permalinks, custom permalinks, seo  
+**Requires at least:** 4.4  
+**Tested up to:** 4.9.8  
+**Requires PHP:** 5.6  
+**Stable tag:** 0.0.3  
+**License:** GPL v2 or later  
+
+###### Follow me
+💻 [Website](https://sebastiendumont.com) 🐦[Twitter](https://twitter.com/sebd86)
+
+
+## Overview 🔔
+
+Enables you to add permalink support for media attachments making the attachment URLs more friendly and great for SEO results.
+
+
+#### Requirements ✅
+
+To use this plugin you will need:
+
+* WordPress v4.4+
+
 
 #### Screenshot
 ![Permalink Options for Attachments](https://raw.githubusercontent.com/seb86/Attachment-Slug/master/screenshot-1.png)
 
-### Plugin Support
-If you need support then please use the WordPress.org forums for [community support](https://wordpress.org/support/plugin/attachment-slug/). If you spot a bug, you can of course log it on this [repository](https://github.com/seb86/Attachment-Slug/issues) instead where I can act upon it more efficiently.
 
-### Support Sébastien's Open Source Projects!
-If you'd like me to keep producing free and open source software or if you use this plugin and find it useful then please consider [paying for an hour](https://www.paypal.me/CodeBreaker/100eur) of my time. I'll spend two hours on open source for each contribution.
+#### Reporting Issues 📝
 
-You can find more of my Free and Open Source [WordPress plugins](http://profiles.wordpress.org/sebd86/) on [WordPress.org](http://profiles.wordpress.org/sebd86/)
+If you think you have found a bug in the extension, please [open a new issue](https://github.com/seb86/Attachment-Slug/issues/new) and I will do my best to help you out.
+
+
+## Contribute
+
+If you or your company use Attachment Slugs for WordPress or appreciate the work I’m doing in open source, please consider supporting me directly so I can continue maintaining it.
+
+You'll be helping to ensure I can spend the time not just fixing bugs, but keeping the project afloat. Any contribution you make is a big help and is greatly appreciated.
+
+Please also consider starring ✨ and sharing 👍 the repo! This helps the project getting known and grow with the community. 🙏
+
+If you want to do a one-time donation, you can donate to:
+- [My PayPal](https://www.paypal.me/codebreaker)
+- [BuyMeACoffee.com](https://www.buymeacoffee.com/sebastien)
+
+
+##### License
+
+Attachment Slugs for WordPress is released under [GNU General Public License v3.0](http://www.gnu.org/licenses/gpl-3.0.html).
+
+
+##### Credits
+
+Attachment Slugs for WordPress is developed and maintained by [Sébastien Dumont](https://sebastiendumont.com/about/).
+
+---
+
+<p align="center">
+	<img src="https://raw.githubusercontent.com/seb86/my-open-source-readme-template/master/a-sebastien-dumont-production.png" width="353">
+</p>

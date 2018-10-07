@@ -2,14 +2,14 @@
 /*
  * Plugin Name: Attachment Slugs for WordPress
  * Plugin URI:  https://wordpress.org/plugins/attachment-slug/
- * Description: Enables you to add an attachment slug allowing the attachment posts to have it's own URL structure.
+ * Description: Enables you to add permalink support for media attachments making the attachment URLs more friendly and great for SEO results.
  * Version:     0.0.2
  * Author:      Sébastien Dumont
  * Author URI:  https://sebastiendumont.com
  * Text Domain: attachment-slug
  * Domain Path: /languages/
  *
- * Copyright:   © 2017 Sébastien Dumont
+ * Copyright:   © 2018 Sébastien Dumont
  * License:     GNU General Public License v2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */

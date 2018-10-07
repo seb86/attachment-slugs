@@ -1,18 +1,19 @@
 === Attachment Slugs for WordPress ===
 Contributors:      sebd86
-Donate Link:       https://sebastiendumont.com/plugin/attachment-slug/
-Tags:              attachment, attachments, attachment slug, page slug, image slug, image url, permalinks, custom permalinks
-Requires at least: 4.0
-Tested up to:      4.9
+Donate Link:       https://www.paypal.me/codebreaker
+Tags:              attachment, attachments, attachment slug, page slug, image slug, image url, permalinks, custom permalinks, seo
+Requires at least: 4.4
+Tested up to:      4.9.8
+Requires PHP:      5.6
 Stable tag:        0.0.2
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
-Enables you to add an attachment slug allowing the attachment posts to have it's own URL structure.
+Enables you to add permalink support for media attachments making the attachment URLs more friendly and great for SEO results.
 
 == Description ==
 
-Enables you to add an attachment slug allowing the attachment posts to have it's own URL structure. This makes the URLs more friendly and great for SEO results should you decide to index your attachment pages.
+Enables you to add permalink support for media attachments making the attachment URLs more friendly and great for SEO results.
 
 = Translate =
 
