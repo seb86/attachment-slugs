@@ -1,27 +1,48 @@
-# Attachment Slug Copyright (c) {2016}
+# Copyright (C) 2018 Sébastien Dumont
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Attachment Slug 0.0.1\n"
-"Report-Msgid-Bugs-To: https://github.com/seb86/Attachment-Slug/issues\n"
-"POT-Creation-Date: 2016-02-23 02:37+0100\n"
+"Project-Id-Version: Attachment Slug\n"
+"Report-Msgid-Bugs-To: https://github.com/seb86/attachment-slugs/issues\n"
+"POT-Creation-Date: 2018-12-03 17:05+0100\n"
 "PO-Revision-Date: 2015-05-20 17:15+0100\n"
-"Last-Translator: Attachment Slug <mailme@sebastiendumont.com>\n"
-"Language-Team: WP-Translations <wpt@wp-translations.org>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Sébastien Dumont <mailme@sebastiendumont.com>\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 2.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: attachment-slug.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
-"_n_noop:1,2;_c;_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Textdomain-Support: yes\n"
 "X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: releases\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+"X-Poedit-SearchPathExcluded-2: languages\n"
 
-#: permalink-settings.php:36
+#: attachment-slug.php:60
+msgid "Cloning this object is forbidden."
+msgstr ""
+
+#: attachment-slug.php:70
+msgid "Unserializing instances of this class is forbidden."
+msgstr ""
+
+#: attachment-slug.php:170 attachment-slug.php:174
+msgid "Attachment Slug"
+msgstr ""
+
+#: attachment-slug.php:172
+msgid "Here you can change the permalink slug for this attachment."
+msgstr ""
+
+#: permalink-settings.php:34
 msgid "Attachment Permalink"
 msgstr ""
 
@@ -45,4 +66,25 @@ msgstr ""
 msgid ""
 "Enter a custom base to use. A base <strong>must</strong> be set or WordPress "
 "will use default instead."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "Attachment Slugs for WordPress"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wordpress.org/plugins/attachment-slug/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Enables WordPress to allow attachments to have their own permalink structure."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Sébastien Dumont"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://sebastiendumont.com"
 msgstr ""

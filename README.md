@@ -1,36 +1,55 @@
 # Attachment Slugs for WordPress
 
 **Contributors:** sebd86  
-**Tags:** attachment, attachments, attachment slug, page slug, image slug, image url, permalinks, custom permalinks, seo  
+**Donate link:** https://www.paypal.me/codebreaker  
+**Tags:** attachment, attachments, attachment slug, page slug, image slug, image url, permalinks, custom permalinks  
 **Requires at least:** 4.4  
-**Tested up to:** 4.9.8  
+**Tested up to:** 5.0.0  
 **Requires PHP:** 5.6  
-**Stable tag:** 0.0.3  
+**Stable tag:** 1.0.0  
 **License:** GPL v2 or later  
 
 ###### Follow me
 💻 [Website](https://sebastiendumont.com) 🐦[Twitter](https://twitter.com/sebd86)
 
 
-## Overview 🔔
+## 🔔 Overview
 
-Enables you to add permalink support for media attachments making the attachment URLs more friendly and great for SEO results.
+Enables WordPress to allow attachments to have their own permalink structure. This makes the URLs more friendly and great for SEO results should you decide to index your attachments.
+
+You can also edit the permalink slug of an indvidual attachment which you can not do via _Quick Edit_ like other post types. Changing the attachment title does not update the permalink slug so this handy to have should you want to rename the URL for the attachment.
 
 
-#### Requirements ✅
+#### ✅ Requirements
 
 To use this plugin you will need:
 
 * WordPress v4.4+
+* PHP v5.6+
+
+#### 💽 Installation
+
+###### Manual
+1. Download a `.zip` file with the [latest version](https://github.com/seb86/attachment-slugs/releases).
+2. Go to **WordPress Admin > Plugins > Add New**.
+3. Click **Upload Plugin** at the top.
+4. **Choose File** and select the `.zip` file you downloaded in **Step 1**.
+5. Click **Install Now** and **Activate** the plugin.
+
+###### Automatic
+1. Go to **WordPress Admin > Plugins > Add New**.
+2. Search for **Attachment Slugs**
+3. Click **Install Now** on the plugin and **Activate** the plugin.
 
 
-#### Screenshot
-![Permalink Options for Attachments](https://raw.githubusercontent.com/seb86/Attachment-Slug/master/screenshot-1.png)
+#### Screenshots
+![Permalink Options for Attachments](https://raw.githubusercontent.com/seb86/attachment-slugs/master/.wordpress-org/assets/screenshot-1.png)
 
+![Edit Attachment Slug](https://raw.githubusercontent.com/seb86/attachment-slugs/master/.wordpress-org/assets/screenshot-2.png)
 
-#### Reporting Issues 📝
+#### 📝 Reporting Issues
 
-If you think you have found a bug in the extension, please [open a new issue](https://github.com/seb86/Attachment-Slug/issues/new) and I will do my best to help you out.
+If you think you have found a bug in the extension, please [open a new issue](https://github.com/seb86/attachment-slugs/issues/new) and I will do my best to help you out.
 
 
 ## Contribute

@@ -2,21 +2,20 @@
 /**
  * Adds settings to the permalinks admin settings page.
  *
- * @class    AS_Admin_Permalink_Settings
  * @author   Sébastien Dumont
  * @category Admin
  * @package  Attachment Slug/Admin
- * @version  0.0.2
  * @since    0.0.1
+ * @version  1.0.0
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'AS_Admin_Permalink_Settings' ) ) {
+if ( ! class_exists( 'Attachment_Slug_Admin_Permalink_Settings' ) ) {
 
-	class AS_Admin_Permalink_Settings {
+	class Attachment_Slug_Admin_Permalink_Settings {
 
 		/**
 		 * Constructor
@@ -24,15 +23,14 @@ if ( ! class_exists( 'AS_Admin_Permalink_Settings' ) ) {
 		public function __construct() {
 			$this->settings_init();
 			$this->settings_save();
-		}
+		} // END __construct()
 
 		/**
-		 * Initilize the settings.
+		 * Add a section to the permalinks page.
 		 *
 		 * @access public
 		 */
 		public function settings_init() {
-			// Add a section to the permalinks page
 			add_settings_section( 'attachment-permalink', __( 'Attachment Permalink', 'attachment-slug' ), array( $this, 'settings' ), 'permalink' );
 		} // END settings_init()
 
@@ -43,9 +41,9 @@ if ( ! class_exists( 'AS_Admin_Permalink_Settings' ) ) {
 		 * @param  string|array $var
 		 * @return string|array
 		 */
-		public function ac_as_clean( $var ) {
-			return is_array( $var ) ? array_map( 'ac_as_clean', $var ) : sanitize_text_field( $var );
-		} // END ac_as_clean()
+		public function aswp_as_clean( $var ) {
+			return is_array( $var ) ? array_map( 'aswp_as_clean', $var ) : sanitize_text_field( $var );
+		} // END aswp_as_clean()
 
 		/**
 		 * Show the settings.
@@ -56,7 +54,7 @@ if ( ! class_exists( 'AS_Admin_Permalink_Settings' ) ) {
 			echo wpautop( __( 'These settings control the permalink used specifically for attachments.', 'attachment-slug' ) );
 
 			$attachment_permalink = get_option( 'attachment_permalink' );
-			$base_slug = apply_filters('ac_as_base_slug', 'image');
+			$base_slug = apply_filters( 'aswp_as_base_slug', 'image' );
 
 			$structures = array(
 				0 => '',
@@ -126,13 +124,13 @@ if ( ! class_exists( 'AS_Admin_Permalink_Settings' ) ) {
 				}
 
 				// Attachment base
-				$attachment_permalink = self::ac_as_clean( $_POST['attachment_permalink'] );
+				$attachment_permalink = self::aswp_as_clean( $_POST['attachment_permalink'] );
 
 				$permalink['custom'] = false;
 
 				if ( $attachment_permalink == 'custom' ) {
 					// Get permalink without slashes
-					$attachment_permalink = trim( self::ac_as_clean( $_POST['attachment_permalink_structure'] ), '/' );
+					$attachment_permalink = trim( self::aswp_as_clean( $_POST['attachment_permalink_structure'] ), '/' );
 
 					// Prepending slash
 					$attachment_permalink = '/' . $attachment_permalink;
@@ -153,4 +151,4 @@ if ( ! class_exists( 'AS_Admin_Permalink_Settings' ) ) {
 
 } // END if class exists
 
-return new AS_Admin_Permalink_Settings();
+return new Attachment_Slug_Admin_Permalink_Settings();
