@@ -3,13 +3,13 @@
  * Plugin Name: Attachment Slugs for WordPress
  * Plugin URI:  https://wordpress.org/plugins/attachment-slug/
  * Description: Enables WordPress to allow attachments to have their own permalink structure.
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      Sébastien Dumont
  * Author URI:  https://sebastiendumont.com
  * Text Domain: attachment-slug
  * Domain Path: /languages/
  *
- * Copyright:   © 2018 Sébastien Dumont
+ * Copyright:   © 2019 Sébastien Dumont
  * License:     GNU General Public License v2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
@@ -31,7 +31,7 @@ if ( ! class_exists( 'Attachment_Slug' ) ) {
 		 * @access public
 		 * @static
 		 */
-		public static $version = '1.0.0';
+		public static $version = '1.0.1';
 
 		/**
 		 * Main Attachment_Slug Instance.

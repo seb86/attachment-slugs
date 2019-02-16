@@ -90,6 +90,18 @@ module.exports = function(grunt) {
 				overwrite: true,
 				replacements: [
 					{
+						from: /Requires PHP:.*$/m,
+						to: "Requires PHP:      <%= pkg.requires_php %>"
+					},
+					{
+						from: /Requires at least:.*$/m,
+						to: "Requires at least: <%= pkg.requires %>"
+					},
+					{
+						from: /Tested up to:.*$/m,
+						to: "Tested up to:      <%= pkg.tested_up_to %>"
+					},
+					{
 						from: /Stable tag:.*$/m,
 						to: "Stable tag:        <%= pkg.version %>"
 					},
@@ -100,7 +112,7 @@ module.exports = function(grunt) {
 					{
 						from: /public static \$version = \'.*.'/m,
 						to: "public static $version = '<%= pkg.version %>'"
-					}
+					},
 				]
 			}
 		},

@@ -1,4 +1,4 @@
-# Contribute To Attachment Slugs
+# Contribute To Attachment Slugs for WordPress
 
 Community made patches, bug reports and contributions are always welcome and are crucial.
 
@@ -23,7 +23,7 @@ GitHub is for *bug reports and contributions only* - if you have a support quest
   * **Ensure you stick to the [WordPress Coding Standards](http://codex.wordpress.org/WordPress_Coding_Standards).**
   * Ensure you use LF line endings - no crazy Windows line endings. :)
 * When committing, reference your issue (#1234) and include a note about the fix.
-* Push the changes to your fork and submit a pull request to the 'dev' branch of the Attachment-Slug repository.
+* Push the changes to your fork and submit a pull request to the 'dev' branch of the attachment-slug repository.
 * Please **don't** modify the changelog - this will be maintained by me.
 * Please **don't** add your localizations or update the .pot files - this will be maintanied by me. To contribute to the localization of Attachment Slug, please join the [Attachment Slug Transifex project](https://www.transifex.com/projects/p/attachment-slug/).
 

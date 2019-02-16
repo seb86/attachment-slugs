@@ -1,11 +1,11 @@
 === Attachment Slugs for WordPress ===
 Contributors:      sebd86
-Donate Link:       https://www.paypal.me/codebreaker
+Donate Link:       https://sebdumont.xyz/donate/
 Tags:              attachment, attachments, attachment slug, page slug, image slug, image url, permalinks, custom permalinks
-Requires PHP:      5.6+
-Requires at least: 4.4.0
-Tested up to:      5.0.0
-Stable tag:        1.0.0
+Requires PHP:      5.6
+Requires at least: 4.4
+Tested up to:      5.1
+Stable tag:        1.0.1
 License:           GPLv2 or later
 License URI:       http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,7 +15,7 @@ Enables WordPress to allow attachments to have their own permalink structure.
 
 Enables WordPress to allow attachments to have their own permalink structure. This makes the URLs more friendly and great for SEO results should you decide to index your attachments.
 
-You can also edit the permalink slug of an indvidual attachment which you can not do via 'Quick Edit' like other post types. Changing the attachment title does not update the permalink slug so this handy to have should you want to rename the URL for the attachment.
+You can also edit the permalink slug of an indvidual attachment which you can not do via "Quick Edit" like other post types. Changing the attachment title does not update the permalink slug so this handy to have should you want to rename the URL for the attachment.
 
 = How to edit an attachment slug =
 Simply go to the media library and edit the item you wish to rename. Then on the left side under "Attachment Slug" you can rename the slug. Press the "Update" button and that's it.
@@ -59,8 +59,11 @@ Automatic updates should work like a charm; as always though, ensure you backup 
 
 == Changelog ==
 
+= v1.0.1 - 16th February 2019 =
+* New: Ready for WordPress 5.1 release. 🎊
+
 = v1.0.0 - 3rd December 2018 =
-* New: Attachments can edit their own permalink slug.
+* New: Attachments can edit their own permalink slug. 🎉
 * Checked: Compaitbility with WordPress 5.0
 * Improved: The main file has been re-written.
 
