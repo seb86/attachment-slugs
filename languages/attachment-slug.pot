@@ -1,13 +1,13 @@
-# # Copyright (c) {2019} Sébastien Dumont
+# # Copyright (c) {2022} Sébastien Dumont
 msgid ""
 msgstr ""
-"Project-Id-Version: Attachment Slugs for WordPress 1.0.1\n"
+"Project-Id-Version: Attachment Slugs for WordPress 2.0.0\n"
 "Report-Msgid-Bugs-To: https://github.com/seb86/attachment-slugs/issues\n"
-"POT-Creation-Date: 2019-02-16 02:32:47+00:00\n"
+"POT-Creation-Date: 2022-12-13 18:04:05+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2019-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2022-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Sébastien Dumont <mailme@sebastiendumont.com>\n"
 "Language: en_US\n"
@@ -23,27 +23,27 @@ msgstr ""
 "X-Textdomain-Support: yes\n"
 "X-Generator: grunt-wp-i18n 1.0.3\n"
 
-#: admin/class-as-permalink-settings.php:34
-msgid "Attachment Permalink"
+#: admin/class-as-permalink-settings.php:41
+msgid "Attachment permalinks"
 msgstr ""
 
-#: admin/class-as-permalink-settings.php:54
+#: admin/class-as-permalink-settings.php:65
 msgid "These settings control the permalink used specifically for attachments."
 msgstr ""
 
-#: admin/class-as-permalink-settings.php:67
+#: admin/class-as-permalink-settings.php:77
 msgid "Default"
 msgstr ""
 
-#: admin/class-as-permalink-settings.php:71
+#: admin/class-as-permalink-settings.php:81
 msgid "Attachment base"
 msgstr ""
 
-#: admin/class-as-permalink-settings.php:76
-msgid "Custom Base"
+#: admin/class-as-permalink-settings.php:86
+msgid "Custom base"
 msgstr ""
 
-#: admin/class-as-permalink-settings.php:78
+#: admin/class-as-permalink-settings.php:89
 msgid ""
 "Enter a custom base to use. A base <strong>must</strong> be set or "
 "WordPress will use default instead."
@@ -55,20 +55,20 @@ msgid ""
 "upgrade your WordPress setup."
 msgstr ""
 
-#: admin/view/html-notice-requirement-wp.php:18 attachment-slug.php:202
-#: attachment-slug.php:206
+#: admin/view/html-notice-requirement-wp.php:18 attachment-slug.php:235
+#: attachment-slug.php:239
 msgid "Attachment Slug"
 msgstr ""
 
-#: attachment-slug.php:60
+#: attachment-slug.php:66
 msgid "Cloning this object is forbidden."
 msgstr ""
 
-#: attachment-slug.php:70
+#: attachment-slug.php:77
 msgid "Unserializing instances of this class is forbidden."
 msgstr ""
 
-#: attachment-slug.php:204
+#: attachment-slug.php:237
 msgid "Here you can change the permalink slug for this attachment."
 msgstr ""
 
@@ -82,8 +82,8 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Enables WordPress to allow attachments to have their own permalink "
-"structure."
+"Enables permalink support for media attachments making the URLs more "
+"friendly and great for SEO."
 msgstr ""
 
 #. Author of the plugin/theme

@@ -1,8 +1,8 @@
 {
-  "title": "Attachment Slug",
+  "title": "Attachment Slugs for WordPress",
   "name": "attachment-slug",
-  "description": "Enables WordPress to allow attachments to have their own permalink structure.",
-  "version": "1.0.1",
+  "description": "Enables permalink support for media attachments making the URLs more friendly and great for SEO.",
+  "version": "2.0.0",
   "private": false,
   "contributors": [
     "sebd86"
@@ -18,21 +18,21 @@
   "bugs": "https://github.com/seb86/attachment-slugs/issues",
   "requires_php": "5.6",
   "requires": "4.4",
-  "tested_up_to": "5.1",
+  "tested_up_to": "6.1",
   "license": "GPL-2.0",
-  "copyright": "Copyright (c) 2019, Sébastien Dumont",
+  "copyright": "Copyright (c) 2022, Sébastien Dumont",
   "dependencies": {},
   "devDependencies": {
-    "grunt": "^1.0.3",
+    "grunt": "^1.5.3",
     "grunt-checktextdomain": "~1.0.1",
-    "grunt-contrib-clean": "~2.0.0",
-    "grunt-contrib-compress": "^1.4.3",
+    "grunt-contrib-clean": "~2.0.1",
+    "grunt-contrib-compress": "2.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-newer": "~1.3.0",
     "grunt-potomo": "~3.5.0",
     "grunt-text-replace": "^0.4.0",
     "grunt-wp-i18n": "^1.0.3",
-    "load-grunt-tasks": "~4.0.0"
+    "load-grunt-tasks": "5.1.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

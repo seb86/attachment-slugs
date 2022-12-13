@@ -2,14 +2,16 @@
 /*
  * Plugin Name: Attachment Slugs for WordPress
  * Plugin URI:  https://wordpress.org/plugins/attachment-slug/
- * Description: Enables WordPress to allow attachments to have their own permalink structure.
- * Version:     1.0.1
+ * Description: Enables permalink support for media attachments making the URLs more friendly and great for SEO.
  * Author:      Sébastien Dumont
  * Author URI:  https://sebastiendumont.com
+ * Version:     2.0.0
  * Text Domain: attachment-slug
  * Domain Path: /languages/
+ * Requires at least: 4.4
+ * Requires PHP:      5.6
  *
- * Copyright:   © 2019 Sébastien Dumont
+ * Copyright:   © 2022 Sébastien Dumont
  * License:     GNU General Public License v2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
@@ -21,6 +23,7 @@ if ( ! class_exists( 'Attachment_Slug' ) ) {
 		 * @var Attachment_Slug - the single instance of the class.
 		 *
 		 * @access protected
+		 *
 		 * @static
 		 */
 		protected static $_instance = null;
@@ -29,9 +32,10 @@ if ( ! class_exists( 'Attachment_Slug' ) ) {
 		 * Plugin Version
 		 *
 		 * @access public
+		 *
 		 * @static
 		 */
-		public static $version = '1.0.1';
+		public static $version = '2.0.0';
 
 		/**
 		 * Main Attachment_Slug Instance.
@@ -39,14 +43,16 @@ if ( ! class_exists( 'Attachment_Slug' ) ) {
 		 * Ensures only one instance of Attachment_Slug is loaded or can be loaded.
 		 *
 		 * @access public
+		 *
 		 * @static
-		 * @see    Attachment_Slug()
+		 *
 		 * @return Attachment_Slug - Main instance
 		 */
 		public static function instance() {
 			if ( is_null( self::$_instance ) ) {
 				self::$_instance = new self();
 			}
+
 			return self::$_instance;
 		}
 
@@ -54,6 +60,7 @@ if ( ! class_exists( 'Attachment_Slug' ) ) {
 		 * Cloning is forbidden.
 		 *
 		 * @access public
+		 *
 		 * @return void
 		 */
 		public function __clone() {
@@ -64,6 +71,7 @@ if ( ! class_exists( 'Attachment_Slug' ) ) {
 		 * Unserializing instances of this class is forbidden.
 		 *
 		 * @access public
+		 *
 		 * @return void
 		 */
 		public function __wakeup() {
@@ -76,7 +84,7 @@ if ( ! class_exists( 'Attachment_Slug' ) ) {
 		 * @access public
 		 */
 		public function __construct() {
-			// Check WordPress enviroment.
+			// Check WordPress environment.
 			add_action( 'admin_init', array( $this, 'check_wp' ), 12 );
 
 			// Permalink settings for attachments.
@@ -102,8 +110,11 @@ if ( ! class_exists( 'Attachment_Slug' ) ) {
 		 * Checks that the WordPress version meets the plugin requirement.
 		 *
 		 * @access public
-		 * @since  1.0.0
+		 *
+		 * @since 1.0.0
+		 *
 		 * @global string $wp_version
+		 *
 		 * @return bool
 		 */
 		public function check_wp() {
@@ -121,7 +132,8 @@ if ( ! class_exists( 'Attachment_Slug' ) ) {
 		 * Show the WordPress requirement notice.
 		 *
 		 * @access public
-		 * @since  1.0.0
+		 *
+		 * @since 1.0.0
 		 */
 		public function requirement_wp_notice() {
 			include( dirname( __FILE__ ) . '/admin/views/html-notice-requirement-wp.php' );
@@ -140,12 +152,13 @@ if ( ! class_exists( 'Attachment_Slug' ) ) {
 		 * Filters the attachment links
 		 *
 		 * @access public
+		 *
 		 * @return string $link
 		 */
 		public function attachment_link( $link, $post_id ){
-			$permalink = get_option( 'attachment_permalink' );
+			$permalinks = $this->aswp_get_permalink_structure();
 
-			$attachment_slug = $permalink['base']; // Attachment base or custom base.
+			$attachment_slug = $permalinks['attachment_base']; // Attachment base or custom base.
 
 			if ( ! empty( $attachment_slug ) ) {
 				$post = get_post( $post_id );
@@ -159,30 +172,48 @@ if ( ! class_exists( 'Attachment_Slug' ) ) {
 		 * Add the Attachment Slug rewrite rule
 		 *
 		 * @access public
+		 *
 		 * @return void
 		 */
 		public function add_rewrite_rule() {
-			$permalink = get_option( 'attachment_permalink' );
+			$permalinks = $this->aswp_get_permalink_structure();
 
-			$attachment_slug = trim( $permalink['base'], '/' ); // Attachment base or custom base.
+			$attachment_slug = ! empty( $permalinks['attachment_base'] ) ? trim( $permalinks['attachment_base'], '/' ) : ''; // Attachment base or custom base.
 
 			if ( ! empty( $attachment_slug ) ) {
 				// Add the rewrite rule.
-				add_rewrite_rule('^' . $attachment_slug . '/([^/]*)/?', 'index.php?attachment=$matches[1]', 'top');
+				add_rewrite_rule( '^' . $attachment_slug . '/([^/]*)/?', 'index.php?attachment=$matches[1]', 'top' );
 			}
 		} // END add_rewrite_rule()
 
 		/**
-		 * Make the plugin translation ready.
+		 * Load the plugin translations if any ready.
 		 *
-		 * Translations should be added in the WordPress language directory:
+		 * Note: the first-loaded translation file overrides any following ones if the same translation is present.
+		 *
+		 * Locales found in:
+		 *      - WP_LANG_DIR/attachment-slug/attachment-slug-LOCALE.mo
 		 *      - WP_LANG_DIR/plugins/attachment-slug-LOCALE.mo
 		 *
 		 * @access public
-		 * @return void
+		 *
+		 * @static
+		 *
+		 * @since   1.0.0 Introduced.
+		 * @version 2.0.0
 		 */
-		public function load_plugin_textdomain() {
-			load_plugin_textdomain( 'attachment-slug', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+		public static function load_plugin_textdomain() {
+			if ( function_exists( 'determine_locale' ) ) {
+				$locale = determine_locale();
+			} else {
+				$locale = is_admin() ? get_user_locale() : get_locale();
+			}
+
+			$locale = apply_filters( 'plugin_locale', $locale, 'attachment-slug' );
+
+			unload_textdomain( 'attachment-slug' );
+			load_textdomain( 'attachment-slug', WP_LANG_DIR . '/attachment-slug/attachment-slug-' . $locale . '.mo' );
+			load_plugin_textdomain( 'attachment-slug', false, plugin_basename( dirname( __FILE__ ) ) . '/languages' );
 		} // END load_plugin_textdomain()
 
 		/**
@@ -190,8 +221,11 @@ if ( ! class_exists( 'Attachment_Slug' ) ) {
 		 * to have a unique slug.
 		 *
 		 * @access public
-		 * @since  1.0.0
+		 *
+		 * @since 1.0.0
+		 *
 		 * @global object $post WP_Post
+		 *
 		 * @return void
  		 */
 		public function individual_slug() {
@@ -212,9 +246,12 @@ if ( ! class_exists( 'Attachment_Slug' ) ) {
 		 * Saves the individual slug for the attachment
 		 *
 		 * @access public
-		 * @since  1.0.0
-		 * @param  int $post_ID Post ID.
-		 * @global     $wpdb WordPress database abstraction object.
+		 *
+		 * @since 1.0.0
+		 *
+		 * @param int $post_ID Post ID.
+		 *
+		 * @global $wpdb WordPress database abstraction object.
 		 */
 		public function save_individual_slug( $post_ID ) {
 			global $wpdb;
@@ -232,6 +269,80 @@ if ( ! class_exists( 'Attachment_Slug' ) ) {
 				) );
 			}
 		} // END save_individual_slug()
+
+		/**
+		 * Get permalink settings for attachments.
+		 *
+		 * This is more inline with WP core behavior which does not localize slugs.
+		 *
+		 * @access public
+		 *
+		 * @since 2.0.0
+		 *
+		 * @static
+		 *
+		 * @return array
+		 */
+		public static function aswp_get_permalink_structure() {
+			$saved_permalinks = (array) get_option( 'attachment_permalink', array() );
+			$permalinks       = wp_parse_args(
+				array_filter( $saved_permalinks ),
+				array(
+					'attachment_base' => '',
+					'custom'          => ''
+				)
+			);
+
+			if ( $saved_permalinks !== $permalinks ) {
+				update_option( 'attachment_permalink', $permalinks );
+			}
+
+			$permalinks['attachment_base'] = untrailingslashit( $permalinks['attachment_base'] );
+
+			return $permalinks;
+		} // END aswp_get_permalink_structure()
+
+		/**
+		 * Switch Attachment Slug to site language.
+		 *
+		 * @access public
+		 *
+		 * @since 2.0.0
+		 *
+		 * @static
+		 */
+		public static function aswp_switch_to_site_locale() {
+			if ( function_exists( 'switch_to_locale' ) ) {
+				switch_to_locale( get_locale() );
+
+				// Filter on plugin_locale so load_plugin_textdomain loads the correct locale.
+				add_filter( 'plugin_locale', 'get_locale' );
+
+				// Init Attachment Slug locale.
+				self::load_plugin_textdomain();
+			}
+		} // END aswp_switch_to_site_locale()
+
+		/**
+		 * Switch Attachment Slug language to original.
+		 *
+		 * @access public
+		 *
+		 * @since 2.0.0
+		 *
+		 * @static
+		 */
+		public static function aswp_restore_locale() {
+			if ( function_exists( 'restore_previous_locale' ) ) {
+				restore_previous_locale();
+
+				// Remove filter.
+				remove_filter( 'plugin_locale', 'get_locale' );
+
+				// Init Attachment Slug locale.
+				self::load_plugin_textdomain();
+			}
+		} // END aswp_restore_locale()
 
 	} // END class
 

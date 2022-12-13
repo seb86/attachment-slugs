@@ -1,11 +1,11 @@
 <?php
 /**
- * Admin View: WordPress Requirment Notice.
+ * Admin View: WordPress Requirement Notice.
  *
  * @since    1.0.0
  * @author   Sébastien Dumont
  * @category Admin
- * @package  Attachment Slug/Admin/Views
+ * @package  Attachment Slugs/Admin/Views
  * @license  GPL-2.0+
  */
 
